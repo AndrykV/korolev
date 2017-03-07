@@ -66,6 +66,7 @@ object RoutingExample extends KorolevBlazeServer {
             }
           ),
           'form(
+            'class /= "frm",
             // Generate AddTodo action when 'Add' button clicked
             eventWithAccess('submit) { access =>
               deferredTransition {
@@ -80,9 +81,12 @@ object RoutingExample extends KorolevBlazeServer {
             'input(
               inputId,
               'type /= "text",
+              'class /= "inputbox",
               'placeholder /= "What should be done?"
             ),
-            'button("Add todo")
+            'button(
+              "Add todo"
+            )
           )
         )
     },
